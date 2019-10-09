@@ -8,29 +8,65 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
+import Whisper
+import InstantSearchClient
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    static let ALGOLIA_APP_ID = "Algolia App ID"
+    static let ALGOLIA_API_KEY = "Algolia API Key"
+    static let USERS_INDEX = "dev_USERS"
+    
+    var propertiesDict:[String:Any]?
+    
+    var algoliaClient:Client?
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let url = Bundle.main.url(forResource:"Info", withExtension: "plist"){
+            let propertiesDict = NSDictionary(contentsOf: url) as? [String:Any]
+            self.propertiesDict = propertiesDict
+        } else{
+            print("Missing info.plist file")
+            fatalError("Missing info.plist file")
+        }
+        
+        if let appID = propertiesDict![AppDelegate.ALGOLIA_APP_ID], let apiKey = propertiesDict![AppDelegate.ALGOLIA_API_KEY]{
+            algoliaClient = Client(appID: appID as! String, apiKey: apiKey as! String)
+        } else{
+            print("Missing info.plist file")
+            fatalError("Missing ALGOLIA_APP_ID or ALGOLIA_API_KEY")
+        }
+       
+        
+        
+        IQKeyboardManager.shared.enable = true
+        
+      //  setupRootViewController()
+        
+        //APIManager Setup
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+    private func setupRootViewController(){
+        // get your storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // instantiate your desired ViewController
+        let rootNavigationController = storyboard.instantiateViewController(withIdentifier: "RootNavigationController") as! UINavigationController
+        
+        // Because self.window is an optional you should check it's value first and assign your rootViewController
+        if let window = self.window {
+            window.rootViewController = rootNavigationController
+        }
+    
+        
     }
 
     // MARK: - Core Data stack
