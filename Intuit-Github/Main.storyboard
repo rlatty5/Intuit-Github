@@ -37,6 +37,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="XYj-Ns-ThC" eventType="touchUpInside" id="Pdy-uc-YAc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inuit Repo Viewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="65u-3c-tOn">
                                 <rect key="frame" x="22" y="199" width="370" height="42.5"/>
@@ -58,6 +61,10 @@
                         <viewLayoutGuide key="safeArea" id="NAz-Un-hMM"/>
                     </view>
                     <navigationItem key="navigationItem" id="kIK-B2-brJ"/>
+                    <connections>
+                        <outlet property="label" destination="65u-3c-tOn" id="tcX-R1-Dbu"/>
+                        <outlet property="loginButton" destination="rbr-ts-xNY" id="NKR-GS-Unp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRm-UU-dk8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Repository" translatesAutoresizingMaskIntoConstraints="NO" id="Rpc-QE-QSk">
-                                <rect key="frame" x="0.0" y="108" width="453" height="44"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="qGV-uj-RhR"/>
                                 </constraints>
@@ -182,15 +189,15 @@
         <!--Tab Bar Controller-->
         <scene sceneID="2wP-zy-SxL">
             <objects>
-                <tabBarController id="THU-Xx-WzS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="THU-Xx-WzS" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bzy-Ut-wl6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xNZ-cg-dw7" kind="relationship" relationship="viewControllers" id="WSK-bN-9Ug"/>
-                        <segue destination="CKO-J7-Ax0" kind="relationship" relationship="viewControllers" id="BbD-4R-dZs"/>
+                        <segue destination="CKO-J7-Ax0" kind="relationship" relationship="viewControllers" id="Xte-EX-Fs7"/>
+                        <segue destination="xNZ-cg-dw7" kind="relationship" relationship="viewControllers" id="x6w-0u-uRk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adh-Bo-97j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -27,6 +27,8 @@
 		F4010BD0234E380E007DD265 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCF234E380E007DD265 /* RepoDetailViewController.swift */; };
 		F4010BD2234E38F8007DD265 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BD1234E38F8007DD265 /* IssuesViewController.swift */; };
 		F4010BD4234E392C007DD265 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BD3234E392C007DD265 /* LoginViewController.swift */; };
+		F4010BD6234EA6A3007DD265 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BD5234EA6A3007DD265 /* RepoCell.swift */; };
+		F4010BD8234EA6BA007DD265 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4010BD7234EA6BA007DD265 /* RepoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		F4010BCF234E380E007DD265 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 		F4010BD1234E38F8007DD265 /* IssuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		F4010BD3234E392C007DD265 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F4010BD5234EA6A3007DD265 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		F4010BD7234EA6BA007DD265 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +259,8 @@
 		F4010BC0234E1ADE007DD265 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F4010BD5234EA6A3007DD265 /* RepoCell.swift */,
+				F4010BD7234EA6BA007DD265 /* RepoCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4010B97234E193F007DD265 /* LaunchScreen.storyboard in Resources */,
+				F4010BD8234EA6BA007DD265 /* RepoCell.xib in Resources */,
 				F4010B94234E193F007DD265 /* Preview Assets.xcassets in Resources */,
 				F4010B91234E193F007DD265 /* Assets.xcassets in Resources */,
 				F4010BC4234E21D5007DD265 /* Main.storyboard in Resources */,
@@ -492,6 +499,7 @@
 				F4010BCE234E373A007DD265 /* User.swift in Sources */,
 				F4010BD4234E392C007DD265 /* LoginViewController.swift in Sources */,
 				F4010BCC234E364F007DD265 /* Issue.swift in Sources */,
+				F4010BD6234EA6A3007DD265 /* RepoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
