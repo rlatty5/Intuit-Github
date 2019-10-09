@@ -58,10 +58,6 @@ class Issue: NSObject {
            
         }
         
-        
-        
-        
-        
     }
     
 }
