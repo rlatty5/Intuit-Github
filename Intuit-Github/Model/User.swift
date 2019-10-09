@@ -9,14 +9,14 @@
 import Foundation
 class User: NSObject {
     
-   var id:String?
+   var id:Int?
    var login:String?
    var avatar_url:String?
    var type:String?
     
     
     init?(data: [String: Any]) {
-        if let id = data["id"] as? String {
+        if let id = data["id"] as? Int {
             self.id = id
         } else{
             return nil

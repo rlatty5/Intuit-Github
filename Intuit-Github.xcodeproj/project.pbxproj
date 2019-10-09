@@ -21,7 +21,6 @@
 		F4010BC2234E1B2F007DD265 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BC1234E1B2F007DD265 /* ServiceManager.swift */; };
 		F4010BC4234E21D5007DD265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4010BC3234E21D5007DD265 /* Main.storyboard */; };
 		F4010BC6234E25B8007DD265 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BC5234E25B8007DD265 /* HomeViewController.swift */; };
-		F4010BC8234E35DC007DD265 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BC7234E35DC007DD265 /* Owner.swift */; };
 		F4010BCA234E3606007DD265 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BC9234E3606007DD265 /* Repository.swift */; };
 		F4010BCC234E364F007DD265 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCB234E364F007DD265 /* Issue.swift */; };
 		F4010BCE234E373A007DD265 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCD234E373A007DD265 /* User.swift */; };
@@ -74,7 +73,6 @@
 		F4010BC1234E1B2F007DD265 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		F4010BC3234E21D5007DD265 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F4010BC5234E25B8007DD265 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F4010BC7234E35DC007DD265 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		F4010BC9234E3606007DD265 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F4010BCB234E364F007DD265 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		F4010BCD234E373A007DD265 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 		F4010BBD234E1AC5007DD265 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F4010BC7234E35DC007DD265 /* Owner.swift */,
 				F4010BC9234E3606007DD265 /* Repository.swift */,
 				F4010BCB234E364F007DD265 /* Issue.swift */,
 				F4010BCD234E373A007DD265 /* User.swift */,
@@ -487,7 +484,6 @@
 				F4010BD2234E38F8007DD265 /* IssuesViewController.swift in Sources */,
 				F4010B8D234E1938007DD265 /* Intuit_Github.xcdatamodeld in Sources */,
 				F4010B88234E1938007DD265 /* AppDelegate.swift in Sources */,
-				F4010BC8234E35DC007DD265 /* Owner.swift in Sources */,
 				F4010BCA234E3606007DD265 /* Repository.swift in Sources */,
 				F4010B8F234E1938007DD265 /* ContentView.swift in Sources */,
 				F4010BD0234E380E007DD265 /* RepoDetailViewController.swift in Sources */,
