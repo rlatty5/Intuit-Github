@@ -29,6 +29,7 @@ class RepoDetailViewController: UIViewController {
     @IBOutlet weak var forkCountLabel: UILabel!
     @IBOutlet weak var starCountLabel: UILabel!
     @IBOutlet weak var watchCountLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     
     var repository:Repository!
@@ -70,5 +71,10 @@ class RepoDetailViewController: UIViewController {
     @IBAction func viewIssues(_ sender: Any) {
         
     }
+    
+    @IBAction func backAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
 }

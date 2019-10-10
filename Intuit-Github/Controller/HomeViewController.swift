@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     
     var isSearching:Bool = false
     
+    var selectedRepository: Repository?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +58,14 @@ class HomeViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let repoNavigationController = segue.destination as! UINavigationController
+
+        let repoDetailViewController = repoNavigationController.viewControllers.first as! RepoDetailViewController
+
+        repoDetailViewController.repository = self.selectedRepository
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -82,9 +92,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(indexPath.row > 1){
+        if(indexPath.row > 0){
             let vc:RepoDetailViewController = self.storyboard!.instantiateViewController(withIdentifier: "RepoDetailViewController") as! RepoDetailViewController
-            vc.repository = repositoryList[indexPath.row]
+            self.selectedRepository = repositoryList[indexPath.row - 1]
+            vc.repository = self.selectedRepository
             self.navigationController?.pushViewController(vc, animated: true)
         }
         

@@ -36,6 +36,7 @@
 		F4010BE6234ED6E8007DD265 /* branch.png in Resources */ = {isa = PBXBuildFile; fileRef = F4010BE3234ED6E8007DD265 /* branch.png */; };
 		F4010BE7234ED6E8007DD265 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = F4010BE4234ED6E8007DD265 /* eye.png */; };
 		F4010BE8234ED6E8007DD265 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = F4010BE5234ED6E8007DD265 /* star.png */; };
+		F476DAF1234EF50D00530C4B /* RepoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		F4010BE3234ED6E8007DD265 /* branch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = branch.png; sourceTree = "<group>"; };
 		F4010BE4234ED6E8007DD265 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
 		F4010BE5234ED6E8007DD265 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 				F4010BC5234E25B8007DD265 /* HomeViewController.swift */,
 				F4010BCF234E380E007DD265 /* RepoDetailViewController.swift */,
 				F4010BD1234E38F8007DD265 /* IssuesViewController.swift */,
+				F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				F4010BD2234E38F8007DD265 /* IssuesViewController.swift in Sources */,
 				F4010B8D234E1938007DD265 /* Intuit_Github.xcdatamodeld in Sources */,
 				F4010B88234E1938007DD265 /* AppDelegate.swift in Sources */,
+				F476DAF1234EF50D00530C4B /* RepoNavigationController.swift in Sources */,
 				F4010BCA234E3606007DD265 /* Repository.swift in Sources */,
 				F4010B8F234E1938007DD265 /* ContentView.swift in Sources */,
 				F4010BD0234E380E007DD265 /* RepoDetailViewController.swift in Sources */,
