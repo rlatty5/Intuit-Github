@@ -23,9 +23,24 @@ class RepoCell: UITableViewCell {
     @IBOutlet weak var watcherImageView: UIImageView!
     @IBOutlet weak var watcherCountLabel: UILabel!
     
+    var repository:Repository!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    
+    func configureCell(){
+        //This cannot be null
+        let user:User = repository.owner!
+        self.profileImageView.downloadFrom(link: user.avatar_url!) {
+            self.nameLabel.text = user.login
+            self.languageLabel.text = self.repository.language
+            self.titleLabel.text = self.repository.name
+            self.descriptionLabel.text = self.repository.descriptionText
+            self.forkCountLabel.text = String(self.repository.forks_count)
+            self.starLabel.text = String(self.repository.stargazers_count)
+            self.watcherCountLabel.text = String(self.repository.watchers_count)
+        }
     }
 }

@@ -30,6 +30,9 @@
 		F4010BD6234EA6A3007DD265 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BD5234EA6A3007DD265 /* RepoCell.swift */; };
 		F4010BD8234EA6BA007DD265 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4010BD7234EA6BA007DD265 /* RepoCell.xib */; };
 		F4010BDA234EAD08007DD265 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BD9234EAD07007DD265 /* IssueCell.swift */; };
+		F4010BDD234EBF16007DD265 /* SearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BDC234EBF16007DD265 /* SearchBarCell.swift */; };
+		F4010BDF234EBF37007DD265 /* SearchBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4010BDE234EBF37007DD265 /* SearchBarCell.xib */; };
+		F4010BE1234EC28E007DD265 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BE0234EC28E007DD265 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		F4010BD7234EA6BA007DD265 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		F4010BD9234EAD07007DD265 /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
 		F4010BDB234EAD24007DD265 /* IssueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IssueCell.xib; path = "/Users/home/Documents/Intuit-Github/Intuit-Github/Cell/IssueCell.xib"; sourceTree = "<absolute>"; };
+		F4010BDC234EBF16007DD265 /* SearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCell.swift; sourceTree = "<group>"; };
+		F4010BDE234EBF37007DD265 /* SearchBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarCell.xib; sourceTree = "<group>"; };
+		F4010BE0234EC28E007DD265 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +261,7 @@
 		F4010BBF234E1AD5007DD265 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F4010BE0234EC28E007DD265 /* Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -266,6 +273,8 @@
 				F4010BD7234EA6BA007DD265 /* RepoCell.xib */,
 				F4010BD9234EAD07007DD265 /* IssueCell.swift */,
 				F4010BDB234EAD24007DD265 /* IssueCell.xib */,
+				F4010BDC234EBF16007DD265 /* SearchBarCell.swift */,
+				F4010BDE234EBF37007DD265 /* SearchBarCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 				F4010B94234E193F007DD265 /* Preview Assets.xcassets in Resources */,
 				F4010B91234E193F007DD265 /* Assets.xcassets in Resources */,
 				F4010BC4234E21D5007DD265 /* Main.storyboard in Resources */,
+				F4010BDF234EBF37007DD265 /* SearchBarCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,8 +510,10 @@
 				F4010B8F234E1938007DD265 /* ContentView.swift in Sources */,
 				F4010BD0234E380E007DD265 /* RepoDetailViewController.swift in Sources */,
 				F4010BC2234E1B2F007DD265 /* ServiceManager.swift in Sources */,
+				F4010BDD234EBF16007DD265 /* SearchBarCell.swift in Sources */,
 				F4010BC6234E25B8007DD265 /* HomeViewController.swift in Sources */,
 				F4010BCE234E373A007DD265 /* User.swift in Sources */,
+				F4010BE1234EC28E007DD265 /* Extensions.swift in Sources */,
 				F4010BD4234E392C007DD265 /* LoginViewController.swift in Sources */,
 				F4010BDA234EAD08007DD265 /* IssueCell.swift in Sources */,
 				F4010BCC234E364F007DD265 /* Issue.swift in Sources */,

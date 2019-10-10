@@ -22,6 +22,7 @@ class Repository: NSObject {
     var default_branch: String?
     var issues_url: String?
     var issues: [Issue]?
+    var language: String?
     
     init?(data: [String: Any]) {
         if let id = data["id"] as? Int{
@@ -39,7 +40,11 @@ class Repository: NSObject {
         }
         
         if let owner = data["owner"] as? [String:Any] {
-            self.owner = User(data: owner)
+            if let self.owner = User(data: owner){
+                return nil
+            }
+        } else{
+            return nil
         }
         
         if let descriptionText = data["description"] as? String{
@@ -72,6 +77,10 @@ class Repository: NSObject {
         
         if let issues_url = data["issues_url"] as? String{
             self.issues_url = issues_url
+        }
+        
+        if let language = data["language"] as? String{
+            self.language = language
         }
         
     }

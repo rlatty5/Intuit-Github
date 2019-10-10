@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Missing info.plist file")
         }
         
+        //Setup Algolia Elastic Search
         if let appID = propertiesDict![AppDelegate.ALGOLIA_APP_ID], let apiKey = propertiesDict![AppDelegate.ALGOLIA_API_KEY]{
             algoliaClient = Client(appID: appID as! String, apiKey: apiKey as! String)
         } else{
@@ -43,11 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Missing ALGOLIA_APP_ID or ALGOLIA_API_KEY")
         }
        
+        //Setup Service Manger
+        ServiceManager.setup()
         
-        
+        //Setup Keyboard Manager
         IQKeyboardManager.shared.enable = true
         
-      //  setupRootViewController()
+        //Initialize Root View Controller
+        setupRootViewController()
         
         //APIManager Setup
         
