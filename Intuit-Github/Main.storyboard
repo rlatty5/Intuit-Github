@@ -326,7 +326,7 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0p-Lr-aOd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="60" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="deV-7n-Xee"/>
                                 </constraints>
@@ -429,32 +429,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXf-TW-CEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="927.536231884058" y="707.8125"/>
+            <point key="canvasLocation" x="928" y="692"/>
         </scene>
-        <!--View Controller-->
+        <!--Issues View Controller-->
         <scene sceneID="B5v-Mk-N5J">
             <objects>
-                <viewController id="m7a-QO-3JX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IssuesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m7a-QO-3JX" customClass="IssuesViewController" customModule="Intuit_Github" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7p-Mj-l6q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Issues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3T-X3-lHG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3T-X3-lHG">
                                 <rect key="frame" x="20" y="44" width="374" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XBo-LM-c2b">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XBo-LM-c2b">
                                 <rect key="frame" x="20" y="103" width="374" height="759"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="k3T-X3-lHG" firstAttribute="trailing" secondItem="Z7p-Mj-l6q" secondAttribute="trailingMargin" id="0TA-pB-lBD"/>
+                            <constraint firstItem="XBo-LM-c2b" firstAttribute="top" secondItem="k3T-X3-lHG" secondAttribute="bottom" constant="8" id="8Uy-PP-X3C"/>
+                            <constraint firstItem="k3T-X3-lHG" firstAttribute="top" secondItem="uWK-GN-8xP" secondAttribute="top" id="RDz-hA-UJC"/>
+                            <constraint firstItem="k3T-X3-lHG" firstAttribute="trailing" secondItem="XBo-LM-c2b" secondAttribute="trailing" id="SQZ-m4-KGQ"/>
+                            <constraint firstItem="XBo-LM-c2b" firstAttribute="bottom" secondItem="uWK-GN-8xP" secondAttribute="bottom" id="b8x-hK-o5i"/>
+                            <constraint firstItem="k3T-X3-lHG" firstAttribute="leading" secondItem="XBo-LM-c2b" secondAttribute="leading" id="j3m-EI-sbg"/>
+                            <constraint firstItem="k3T-X3-lHG" firstAttribute="leading" secondItem="Z7p-Mj-l6q" secondAttribute="leadingMargin" id="vdJ-pl-jUP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uWK-GN-8xP"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="XBo-LM-c2b" id="Pmd-tA-f9M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XS0-at-AZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

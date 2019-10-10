@@ -85,7 +85,9 @@ class Repository: NSObject {
         }
         
         if let issues_url = data["issues_url"] as? String{
-            self.issues_url = issues_url
+            let replaced = issues_url.replacingOccurrences(of: "{/number}", with: "")
+            self.issues_url = replaced
+            
         }
         
         if let language = data["language"] as? String{

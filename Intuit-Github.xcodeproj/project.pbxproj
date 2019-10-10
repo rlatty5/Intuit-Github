@@ -37,6 +37,7 @@
 		F4010BE7234ED6E8007DD265 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = F4010BE4234ED6E8007DD265 /* eye.png */; };
 		F4010BE8234ED6E8007DD265 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = F4010BE5234ED6E8007DD265 /* star.png */; };
 		F476DAF1234EF50D00530C4B /* RepoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */; };
+		F476DAF4234F54AE00530C4B /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F476DAF3234F54AE00530C4B /* IssueCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +93,6 @@
 		F4010BD5234EA6A3007DD265 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		F4010BD7234EA6BA007DD265 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		F4010BD9234EAD07007DD265 /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
-		F4010BDB234EAD24007DD265 /* IssueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IssueCell.xib; path = "/Users/home/Documents/Intuit-Github/Intuit-Github/Cell/IssueCell.xib"; sourceTree = "<absolute>"; };
 		F4010BDC234EBF16007DD265 /* SearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCell.swift; sourceTree = "<group>"; };
 		F4010BDE234EBF37007DD265 /* SearchBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarCell.xib; sourceTree = "<group>"; };
 		F4010BE0234EC28E007DD265 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 		F4010BE4234ED6E8007DD265 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
 		F4010BE5234ED6E8007DD265 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoNavigationController.swift; sourceTree = "<group>"; };
+		F476DAF3234F54AE00530C4B /* IssueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,7 +283,7 @@
 				F4010BD5234EA6A3007DD265 /* RepoCell.swift */,
 				F4010BD7234EA6BA007DD265 /* RepoCell.xib */,
 				F4010BD9234EAD07007DD265 /* IssueCell.swift */,
-				F4010BDB234EAD24007DD265 /* IssueCell.xib */,
+				F476DAF3234F54AE00530C4B /* IssueCell.xib */,
 				F4010BDC234EBF16007DD265 /* SearchBarCell.swift */,
 				F4010BDE234EBF37007DD265 /* SearchBarCell.xib */,
 			);
@@ -408,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4010B97234E193F007DD265 /* LaunchScreen.storyboard in Resources */,
+				F476DAF4234F54AE00530C4B /* IssueCell.xib in Resources */,
 				F4010BE6234ED6E8007DD265 /* branch.png in Resources */,
 				F4010BE8234ED6E8007DD265 /* star.png in Resources */,
 				F4010BD8234EA6BA007DD265 /* RepoCell.xib in Resources */,

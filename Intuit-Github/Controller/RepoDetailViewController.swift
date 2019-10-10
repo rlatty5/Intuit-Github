@@ -70,6 +70,10 @@ class RepoDetailViewController: UIViewController {
     
     @IBAction func viewIssues(_ sender: Any) {
         
+        let vc:IssuesViewController = self.storyboard!.instantiateViewController(withIdentifier: "IssuesViewController") as! IssuesViewController
+        vc.repository = self.repository
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     @IBAction func backAction(_ sender: Any) {

@@ -39,6 +39,24 @@ class ServiceManager{
         }
     }
     
+    static func getIssues(_ issueURL: String, completion: @escaping (_ issues:[Issue]?, _ error: Error?) -> Void){
+        ServiceManager.getRequest(url: issueURL) { (data, error) in
+            var issueList:[Issue] = [] //clear previos data
+            if(data == nil || error != nil){
+                completion([], error)
+            } else{
+                for issue in data!{
+                    if let i = Issue(data: issue){
+                        issueList.append(i)
+                    }
+                }
+                completion(issueList, nil)
+            }
+            
+            
+        }
+    }
+    
     static func getRequest(url: String, completion: @escaping (_ data:[[String: Any]]?, _ error: Error?) -> Void){
         if let url = URL(string: url){
             var request = URLRequest(url: url)
