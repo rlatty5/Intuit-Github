@@ -13,30 +13,63 @@ class ServiceManager{
     
    static let appDelegate = UIApplication.shared.delegate as! AppDelegate
    static var repositories:[Repository]!
+   static var INTUIT_REPO = "https://api.github.com/users/intuit/repos"
     
     static func setup() {
        
+        //singelton instance of repo list
         repositories = []
     }
     
-    static func getRequest(completion: @escaping (_ error: Error?) -> Void){
-        var request = URLRequest(url: URL(string: "http://localhost:8080/api/1/login")!)
-        request.httpMethod = "POST"
-        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        let session = URLSession.shared
-        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            print(response!)
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-                print(json)
-            } catch {
-                print("error")
+    static func getRepositories(completion: @escaping (_ repositories:[Repository]?, _ error: Error?) -> Void){
+        ServiceManager.getRequest(url: INTUIT_REPO) { (data, error) in
+            repositories = [] //clear previos data
+            if(data == nil || error != nil){
+                completion([], error)
+            } else{
+                for repo in Array(data!.values){
+                    if let repository = repo as? [String:Any]{
+                        if let r = Repository(data: repository){
+                            repositories.append(r)
+                        }
+                        
+                    }
+                }
+                completion(repositories, nil)
             }
-        })
+            
+            
+        }
+    }
+    
+    static func getRequest(url: String, completion: @escaping (_ data:[String:Any]?, _ error: Error?) -> Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.httpBody = try? JSONSerialization.data(withJSONObject: [], options: [])
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        task.resume()
+            let session = URLSession.shared
+            let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+                print(response!)
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+                    print(json)
+                    completion(json, nil)
+                    
+                } catch {
+                    print("error")
+                    completion(nil, error)
+                }
+            })
+
+            task.resume()
+        } else{
+           //TODO Throw Custom Error Message
+            completion(nil, NSError(domain:"", code:503, userInfo:nil))
+            
+        }
+        
         
     }
     

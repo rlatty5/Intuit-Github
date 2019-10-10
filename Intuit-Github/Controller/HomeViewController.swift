@@ -20,20 +20,33 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadRepositories()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
     }
     
     private func loadRepositories(){
-        
+        ServiceManager.getRepositories { (repositories, error) in
+            if(error != nil || repositories == nil){
+                //TODO Add popup alert here
+                print("There was an error processing your request")
+            } else{
+                self.repositoryList = repositories!
+            }
+        }
     }
     
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return repositoryList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         return nil
     }
     
