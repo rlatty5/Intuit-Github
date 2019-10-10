@@ -38,9 +38,9 @@ class RepoCell: UITableViewCell {
             self.languageLabel.text = self.repository.language
             self.titleLabel.text = self.repository.name
             self.descriptionLabel.text = self.repository.descriptionText
-            self.forkCountLabel.text = String(self.repository.forks_count)
-            self.starLabel.text = String(self.repository.stargazers_count)
-            self.watcherCountLabel.text = String(self.repository.watchers_count)
+            self.forkCountLabel.text = String(self.repository.forks_count!)
+            self.starLabel.text = String(self.repository.stargazers_count!)
+            self.watcherCountLabel.text = String(self.repository.watchers_count!)
         }
     }
 }

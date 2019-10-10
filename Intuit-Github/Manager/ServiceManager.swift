@@ -27,12 +27,9 @@ class ServiceManager{
             if(data == nil || error != nil){
                 completion([], error)
             } else{
-                for repo in Array(data!.values){
-                    if let repository = repo as? [String:Any]{
-                        if let r = Repository(data: repository){
-                            repositories.append(r)
-                        }
-                        
+                for repo in data!{
+                    if let r = Repository(data: repo){
+                        repositories.append(r)
                     }
                 }
                 completion(repositories, nil)
@@ -42,18 +39,18 @@ class ServiceManager{
         }
     }
     
-    static func getRequest(url: String, completion: @escaping (_ data:[String:Any]?, _ error: Error?) -> Void){
+    static func getRequest(url: String, completion: @escaping (_ data:[[String: Any]]?, _ error: Error?) -> Void){
         if let url = URL(string: url){
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
-            request.httpBody = try? JSONSerialization.data(withJSONObject: [], options: [])
+            //request.httpBody = try? JSONSerialization.data(withJSONObject: [], options: [])
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
             let session = URLSession.shared
             let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
                 print(response!)
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+                    let json = try JSONSerialization.jsonObject(with: data!) as! [[String: Any]]
                     print(json)
                     completion(json, nil)
                     

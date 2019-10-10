@@ -11,7 +11,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var repositoryList: [Repository] = []
@@ -33,8 +32,7 @@ class HomeViewController: UIViewController {
         let searchBarCellNib = UINib(nibName: "SearchBarCell", bundle: nil)
         tableView.register(searchBarCellNib, forCellReuseIdentifier: "SearchBarCell")
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        
         
     }
     
@@ -46,6 +44,14 @@ class HomeViewController: UIViewController {
             } else{
                 self.repositoryList = repositories!
             }
+            
+            //Dispatch UI Updates on the Main Thread
+            DispatchQueue.main.async {
+               self.tableView.dataSource = self
+               self.tableView.delegate = self
+            }
+            
+            
         }
     }
     
@@ -64,11 +70,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.delegate = self
             return cell
         default:
-            var cell = tableView.dequeueReusableCell(withIdentifier: "RepoCell") as! RepoCell
-            let repoCell = cell as! RepoCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RepoCell") as! RepoCell
+            let repoCell = cell 
             let currentRepository = repositoryList[indexPath.row - 1]
-            conversationCell.conversation = currentConversation
-            conversationCell.configureCell()
+            repoCell.repository = currentRepository
+            repoCell.configureCell()
             
             return cell
         }

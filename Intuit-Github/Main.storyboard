@@ -84,15 +84,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Repository" translatesAutoresizingMaskIntoConstraints="NO" id="Rpc-QE-QSk">
-                                <rect key="frame" x="0.0" y="108" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="qGV-uj-RhR"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-pe-Bwr">
-                                <rect key="frame" x="20" y="167" width="374" height="646"/>
+                                <rect key="frame" x="20" y="103" width="374" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -101,19 +94,15 @@
                             <constraint firstItem="CTu-r9-fFF" firstAttribute="trailing" secondItem="Esj-p4-hWb" secondAttribute="trailing" constant="20" id="5Hc-lh-wXc"/>
                             <constraint firstItem="Esj-p4-hWb" firstAttribute="leading" secondItem="CTu-r9-fFF" secondAttribute="leading" constant="20" id="Fsm-py-7e0"/>
                             <constraint firstItem="CTu-r9-fFF" firstAttribute="bottom" secondItem="PEd-pe-Bwr" secondAttribute="bottom" id="LY0-3w-24R"/>
-                            <constraint firstItem="Rpc-QE-QSk" firstAttribute="leading" secondItem="nNx-17-x7k" secondAttribute="leading" id="TjL-rz-ZXN"/>
+                            <constraint firstItem="PEd-pe-Bwr" firstAttribute="top" secondItem="Esj-p4-hWb" secondAttribute="bottom" constant="8" id="ZjO-5R-rx4"/>
                             <constraint firstItem="PEd-pe-Bwr" firstAttribute="leading" secondItem="CTu-r9-fFF" secondAttribute="leading" constant="20" id="bfF-ZV-i3O"/>
                             <constraint firstItem="CTu-r9-fFF" firstAttribute="trailing" secondItem="PEd-pe-Bwr" secondAttribute="trailing" constant="20" id="eJt-RI-Q5B"/>
-                            <constraint firstItem="PEd-pe-Bwr" firstAttribute="top" secondItem="Rpc-QE-QSk" secondAttribute="bottom" constant="15" id="fbt-0K-Xjd"/>
-                            <constraint firstItem="Rpc-QE-QSk" firstAttribute="centerX" secondItem="Esj-p4-hWb" secondAttribute="centerX" id="rf6-eV-VWz"/>
                             <constraint firstItem="Esj-p4-hWb" firstAttribute="top" secondItem="CTu-r9-fFF" secondAttribute="top" id="uay-4a-XcH"/>
-                            <constraint firstItem="Rpc-QE-QSk" firstAttribute="top" secondItem="Esj-p4-hWb" secondAttribute="bottom" constant="13" id="yb5-81-MhG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CTu-r9-fFF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="3Kb-Qo-obX"/>
                     <connections>
-                        <outlet property="searchBar" destination="Rpc-QE-QSk" id="nBh-Y0-lMN"/>
                         <outlet property="tableView" destination="PEd-pe-Bwr" id="b3t-Gc-Oth"/>
                     </connections>
                 </viewController>

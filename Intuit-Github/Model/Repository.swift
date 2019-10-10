@@ -40,7 +40,8 @@ class Repository: NSObject {
         }
         
         if let owner = data["owner"] as? [String:Any] {
-            if let self.owner = User(data: owner){
+            self.owner = User(data: owner)
+            if self.owner == nil {
                 return nil
             }
         } else{
