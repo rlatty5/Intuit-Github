@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/home/Documents/Intuit-Github/Intuit-Github/Cell/IssueCell.xib">
+   </FileRef>
+   <FileRef
       location = "group:Intuit-Github.xcodeproj">
    </FileRef>
    <FileRef
