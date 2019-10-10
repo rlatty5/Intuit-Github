@@ -23,6 +23,7 @@ class Repository: NSObject {
     var issues_url: String?
     var issues: [Issue]?
     var language: String?
+    var open_issues_count: Int?
     
     init?(data: [String: Any]) {
         if let id = data["id"] as? Int{
@@ -92,6 +93,10 @@ class Repository: NSObject {
         
         if let language = data["language"] as? String{
             self.language = language
+        }
+        
+        if let open_issues_count = data["open_issues_count"] as? Int{
+            self.open_issues_count = open_issues_count
         }
         
     }

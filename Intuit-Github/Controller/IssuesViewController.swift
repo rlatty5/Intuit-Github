@@ -51,7 +51,12 @@ class IssuesViewController: UIViewController {
             }
             
         }
-        
+    
+    
+    @IBAction func backAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     }
 
 extension IssuesViewController: UITableViewDelegate, UITableViewDataSource {
