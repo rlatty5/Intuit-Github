@@ -81,6 +81,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row > 1){
+            let vc:RepoDetailViewController = self.storyboard!.instantiateViewController(withIdentifier: "RepoDetailViewController") as! RepoDetailViewController
+            vc.repository = repositoryList[indexPath.row - 1]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }
+    
 
 }
 

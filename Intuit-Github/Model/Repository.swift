@@ -37,6 +37,8 @@ class Repository: NSObject {
         
         if let isPrivate = data["private"] as? Bool{
             self.isPrivate = isPrivate
+        } else{
+            self.isPrivate = false
         }
         
         if let owner = data["owner"] as? [String:Any] {

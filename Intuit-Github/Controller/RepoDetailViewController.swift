@@ -26,10 +26,45 @@ class RepoDetailViewController: UIViewController {
     
     @IBOutlet weak var issuesButton: UIButton!
     
+    @IBOutlet weak var forkCountLabel: UILabel!
+    @IBOutlet weak var starCountLabel: UILabel!
+    @IBOutlet weak var watchCountLabel: UILabel!
+    
+    
     var repository:Repository!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Setup View
+        configureView()
+    }
+    
+    func configureView(){
+        let user:User = repository.owner!
+        self.profileViewController.downloadFrom(link: user.avatar_url!) {
+            self.nameLabel.text = user.login
+            self.languageLabel.text = self.repository.language
+            self.titleLabel.text = self.repository.name
+            self.descriptionLabel.text = self.repository.descriptionText
+            self.forkCountLabel.text = String(self.repository.forks_count!)
+            self.starCountLabel.text = String(self.repository.stargazers_count!)
+            self.watchCountLabel.text = String(self.repository.watchers_count!)
+            
+            if self.repository.isPrivate != nil {
+                self.privateLabel.text = "Private Repository"
+            } else{
+                self.privateLabel.text = "Public Repository"
+            }
+            
+            self.createdLabel.text = self.repository.created_at
+            self.updatedLabel.text = self.repository.updated_at
+            self.branchLabel.text = self.repository.default_branch
+        }
+    }
+    
+    static func formatDate(){
+        
     }
     
     @IBAction func viewIssues(_ sender: Any) {
