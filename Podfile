@@ -36,11 +36,17 @@ end
   target 'Intuit-GithubTests' do
     inherit! :search_paths
     # Pods for testing
+pod 'IQKeyboardManagerSwift', '~> 6.3'
+pod 'Whisper'
+pod 'InstantSearchClient', '~> 7.0'
   end
 
   target 'Intuit-GithubUITests' do
     inherit! :search_paths
     # Pods for testing
+pod 'IQKeyboardManagerSwift', '~> 6.3'
+pod 'Whisper'
+pod 'InstantSearchClient', '~> 7.0'
   end
 
 end

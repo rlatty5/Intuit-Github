@@ -39,6 +39,9 @@
 		F41C1FF4234FAD6400B6CC9F /* IssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C1FF3234FAD6400B6CC9F /* IssueDetailViewController.swift */; };
 		F41C1FF6234FAE0D00B6CC9F /* AssigneeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C1FF5234FAE0D00B6CC9F /* AssigneeCell.swift */; };
 		F41C1FF8234FAE1F00B6CC9F /* AssigneeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41C1FF7234FAE1F00B6CC9F /* AssigneeCell.xib */; };
+		F41C1FFA234FC10600B6CC9F /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C1FF9234FC10600B6CC9F /* UITests.swift */; };
+		F41C1FFC234FC31500B6CC9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCD234E373A007DD265 /* User.swift */; };
+		F41C1FFD234FC31500B6CC9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCD234E373A007DD265 /* User.swift */; };
 		F476DAF1234EF50D00530C4B /* RepoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */; };
 		F476DAF4234F54AE00530C4B /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F476DAF3234F54AE00530C4B /* IssueCell.xib */; };
 /* End PBXBuildFile section */
@@ -105,6 +108,7 @@
 		F41C1FF3234FAD6400B6CC9F /* IssueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailViewController.swift; sourceTree = "<group>"; };
 		F41C1FF5234FAE0D00B6CC9F /* AssigneeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssigneeCell.swift; sourceTree = "<group>"; };
 		F41C1FF7234FAE1F00B6CC9F /* AssigneeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssigneeCell.xib; sourceTree = "<group>"; };
+		F41C1FF9234FC10600B6CC9F /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoNavigationController.swift; sourceTree = "<group>"; };
 		F476DAF3234F54AE00530C4B /* IssueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +230,7 @@
 			children = (
 				F4010BAC234E193F007DD265 /* Intuit_GithubUITests.swift */,
 				F4010BAE234E193F007DD265 /* Info.plist */,
+				F41C1FF9234FC10600B6CC9F /* UITests.swift */,
 			);
 			path = "Intuit-GithubUITests";
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				F4010B99234E193F007DD265 /* Sources */,
 				F4010B9A234E193F007DD265 /* Frameworks */,
 				F4010B9B234E193F007DD265 /* Resources */,
+				58E7F7FC8C767017548D0978 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -358,6 +364,7 @@
 				F4010BA4234E193F007DD265 /* Sources */,
 				F4010BA5234E193F007DD265 /* Frameworks */,
 				F4010BA6234E193F007DD265 /* Resources */,
+				6DA9B4BE6EF63F9E34EC72DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,6 +477,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		58E7F7FC8C767017548D0978 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Intuit-GithubTests/Pods-Intuit-GithubTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Intuit-GithubTests/Pods-Intuit-GithubTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Intuit-GithubTests/Pods-Intuit-GithubTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		64F176E03376C4D885938117 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +514,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DA9B4BE6EF63F9E34EC72DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Intuit-GithubUITests/Pods-Intuit-GithubUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Intuit-GithubUITests/Pods-Intuit-GithubUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Intuit-GithubUITests/Pods-Intuit-GithubUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		95D946A5233D215E745E4176 /* [CP] Embed Pods Frameworks */ = {
@@ -563,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41C1FFC234FC31500B6CC9F /* User.swift in Sources */,
 				F4010BA2234E193F007DD265 /* Intuit_GithubTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,6 +614,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4010BAD234E193F007DD265 /* Intuit_GithubUITests.swift in Sources */,
+				F41C1FFA234FC10600B6CC9F /* UITests.swift in Sources */,
+				F41C1FFD234FC31500B6CC9F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

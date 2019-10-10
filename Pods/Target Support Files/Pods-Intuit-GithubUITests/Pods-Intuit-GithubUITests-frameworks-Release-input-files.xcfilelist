@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Intuit-GithubUITests/Pods-Intuit-GithubUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${BUILT_PRODUCTS_DIR}/InstantSearchClient/InstantSearchClient.framework
+${BUILT_PRODUCTS_DIR}/Whisper/Whisper.framework
