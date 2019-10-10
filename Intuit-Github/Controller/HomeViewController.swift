@@ -49,9 +49,10 @@ class HomeViewController: UIViewController {
             
             //Dispatch UI Updates on the Main Thread
             DispatchQueue.main.async {
-               self.tableView.dataSource = self
                self.tableView.delegate = self
-               self.tableView.layoutIfNeeded()
+               self.tableView.dataSource = self
+               self.tableView.reloadData()
+               
             }
             
             
