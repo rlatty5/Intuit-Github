@@ -19,13 +19,16 @@ class AssigneeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        configureCell()
+       profileImageView.layer.masksToBounds = false
+       profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+       profileImageView.clipsToBounds = true
         
     }
     
     func configureCell(){
         self.profileImageView.downloadFrom(link: user.avatar_url!) {
-        //TODO
+            self.nameLabel.text = self.user.login
+            self.typeLabel.text = self.user.type
         }
     }
 }
