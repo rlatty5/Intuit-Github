@@ -505,7 +505,7 @@
         <!--Issue Detail View Controller-->
         <scene sceneID="rmi-lJ-OCY">
             <objects>
-                <viewController id="GLI-SZ-F3v" customClass="IssueDetailViewController" customModule="Intuit_Github" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IssueDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GLI-SZ-F3v" customClass="IssueDetailViewController" customModule="Intuit_Github" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X6t-qz-tNA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

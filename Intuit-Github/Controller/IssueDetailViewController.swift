@@ -31,32 +31,40 @@ class IssueDetailViewController: UIViewController {
             let assigneeCellNib = UINib(nibName: "AssigneeCell", bundle: nil)
             tableView.register(assigneeCellNib, forCellReuseIdentifier: "AssigneeCell")
            
+            configureView()
            //Load Repository Data
            loadAssigness()
+        
            
            
            
        }
     
     private func loadAssigness(){
-        //Must check if assignee_url is ever nil
-        ServiceManager.loadAssigneesByIssue(issue.assignees_url!) { (assignees, error) in
-            if(error != nil || assignees == nil){
-                //TODO Add popup alert here
-                print("There was an error processing your request")
-            } else{
-                self.assignees = assignees!
-            }
-            
-            //Dispatch UI Updates on the Main Thread
-            DispatchQueue.main.async {
-               self.tableView.delegate = self
-               self.tableView.dataSource = self
-               self.tableView.reloadData()
-               
-            }
+        if(issue.assignees != nil){
+            assignees = []
+        }
+        assignees = issue.assignees!
+        //Dispatch UI Updates on the Main Thread
+        DispatchQueue.main.async {
+           self.tableView.delegate = self
+           self.tableView.dataSource = self
+           self.tableView.reloadData()
+           
         }
         
+    }
+    
+    private func configureView(){
+        let user:User = issue.user!
+        self.profileImageView.downloadFrom(link: user.avatar_url!) {
+            self.nameLabel.text = user.login
+            self.titleLabel.text = self.issue.title
+            self.stateLabel.text = self.issue.state
+            self.createdAtLabel.text = self.issue.created_at
+            self.updatedLabel.text = self.issue.updated_at
+            
+        }
     }
     
     @IBAction func backAction(_ sender: Any) {
