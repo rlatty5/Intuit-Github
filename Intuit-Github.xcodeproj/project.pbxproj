@@ -42,6 +42,8 @@
 		F41C1FFA234FC10600B6CC9F /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C1FF9234FC10600B6CC9F /* UITests.swift */; };
 		F41C1FFC234FC31500B6CC9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCD234E373A007DD265 /* User.swift */; };
 		F41C1FFD234FC31500B6CC9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCD234E373A007DD265 /* User.swift */; };
+		F41C1FFE234FC84800B6CC9F /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCB234E364F007DD265 /* Issue.swift */; };
+		F41C1FFF234FC84900B6CC9F /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCB234E364F007DD265 /* Issue.swift */; };
 		F476DAF1234EF50D00530C4B /* RepoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */; };
 		F476DAF4234F54AE00530C4B /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F476DAF3234F54AE00530C4B /* IssueCell.xib */; };
 /* End PBXBuildFile section */
@@ -606,6 +608,7 @@
 			files = (
 				F41C1FFC234FC31500B6CC9F /* User.swift in Sources */,
 				F4010BA2234E193F007DD265 /* Intuit_GithubTests.swift in Sources */,
+				F41C1FFE234FC84800B6CC9F /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +619,7 @@
 				F4010BAD234E193F007DD265 /* Intuit_GithubUITests.swift in Sources */,
 				F41C1FFA234FC10600B6CC9F /* UITests.swift in Sources */,
 				F41C1FFD234FC31500B6CC9F /* User.swift in Sources */,
+				F41C1FFF234FC84900B6CC9F /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

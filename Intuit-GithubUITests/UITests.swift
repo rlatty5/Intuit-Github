@@ -27,12 +27,16 @@ class UITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testLogin() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-                        
+        
+        let app = XCUIApplication()
+        app.staticTexts["Inuit Repo Viewer"].tap()
+        app.buttons["Login"].tap()
+        
+                                
     }
-    
     func testOneValidUser(){
         let goodData: [String: Any] = [
             "id": 1234,
@@ -54,5 +58,30 @@ class UITests: XCTestCase {
         XCTAssertTrue(user1 == nil)
         
     }
-
+    
+    func testOneValidIssue(){
+        let goodData: [String: Any] = [
+            "id": 1234,
+            "title": "Bad Login Experience",
+            "created_at": "created_at",
+            "updated_at": "updated_at"
+        ]
+        
+        let issue1 = Issue(data: goodData)
+        XCTAssertTrue(issue1 != nil)
+        
+        
+    }
+    
+    func testOneInvalidIssue(){
+        //NO ID
+        let badData: [String: Any] = [
+            "title": "Bad Login Experience",
+            "created_at": "created_at",
+            "updated_at": "updated_at"
+        ]
+        
+        let issue1 = Issue(data: badData)
+        XCTAssertFalse(issue1 != nil)
+    }
 }
