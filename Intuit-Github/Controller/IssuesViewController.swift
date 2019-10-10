@@ -76,11 +76,10 @@ extension IssuesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        /* let vc:RepoDetailViewController = self.storyboard!.instantiateViewController(withIdentifier: "RepoDetailViewController") as! RepoDetailViewController
-                   self.selectedRepository = repositoryList[indexPath.row - 1]
-                   vc.repository = self.selectedRepository
+         let vc:IssueDetailViewController = self.storyboard!.instantiateViewController(withIdentifier: "IssueDetailViewController") as! IssueDetailViewController
+                   vc.issue = issues[indexPath.row]
                    self.navigationController?.pushViewController(vc, animated: true)
-        */
+        
     }
     
 

@@ -16,6 +16,7 @@ class Issue: NSObject {
     var created_at: String?
     var updated_at: String?
     var assignees: [User]?
+    var assignees_url: String?
     
     init?(data: [String: Any]) {
         if let id = data["id"] as? Int {
@@ -42,6 +43,11 @@ class Issue: NSObject {
         
         if let updated_at = data["updated_at"] as? String {
             self.updated_at = updated_at
+        }
+        
+        if let assignees_url = data["assignees_url"] as? String {
+            let replaced = assignees_url.replacingOccurrences(of: "{/user}", with: "")
+            self.assignees_url = replaced
         }
         
         if let assignees = data["assignees"] as? [Any] {

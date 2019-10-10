@@ -53,9 +53,9 @@ class RepoDetailViewController: UIViewController {
             self.watchCountLabel.text = String(self.repository.watchers_count!)
             
             if self.repository.isPrivate != nil {
-                self.privateLabel.text = "Private Repository"
+                self.privateLabel.text = "Private"
             } else{
-                self.privateLabel.text = "Public Repository"
+                self.privateLabel.text = "Public"
             }
             
             self.createdLabel.text = self.repository.created_at
@@ -67,6 +67,10 @@ class RepoDetailViewController: UIViewController {
             } else{
                 self.issuesButton.isHidden = false
             }
+            
+            self.profileViewController.layer.masksToBounds = false
+            self.profileViewController.layer.cornerRadius = self.profileViewController.frame.height/2
+            self.profileViewController.clipsToBounds = true
         }
     }
     

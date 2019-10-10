@@ -57,6 +57,24 @@ class ServiceManager{
         }
     }
     
+    static func loadAssigneesByIssue(_ issueAssigneesURL: String, completion: @escaping (_ assignees:[User]?, _ error: Error?) -> Void){
+        ServiceManager.getRequest(url: issueAssigneesURL) { (data, error) in
+            var assigneeList:[User] = [] //clear previos data
+            if(data == nil || error != nil){
+                completion([], error)
+            } else{
+                for assignee in data!{
+                    if let a = User(data: assignee){
+                        assigneeList.append(a)
+                    }
+                }
+                completion(assigneeList, nil)
+            }
+            
+            
+        }
+    }
+    
     static func getRequest(url: String, completion: @escaping (_ data:[[String: Any]]?, _ error: Error?) -> Void){
         if let url = URL(string: url){
             var request = URLRequest(url: url)
