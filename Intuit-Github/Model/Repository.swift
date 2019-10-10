@@ -62,14 +62,20 @@ class Repository: NSObject {
         
         if let stargazers_count = data["stargazers_count"] as? Int{
             self.stargazers_count = stargazers_count
+        } else{
+            self.stargazers_count = 0
         }
         
         if let watchers_count = data["watchers_count"] as? Int{
             self.watchers_count = watchers_count
+        } else{
+            self.watchers_count = 0
         }
         
         if let forks_count = data["forks_count"] as? Int{
             self.forks_count = forks_count
+        } else{
+            self.forks_count = 0
         }
         
         if let default_branch = data["default_branch"] as? String{

@@ -49,6 +49,7 @@ class HomeViewController: UIViewController {
             DispatchQueue.main.async {
                self.tableView.dataSource = self
                self.tableView.delegate = self
+               self.tableView.layoutIfNeeded()
             }
             
             
