@@ -50,6 +50,36 @@ extension UIImageView {
        
     }
     
-    
+}
 
+extension String{
+    func UTCToLocal() -> String {
+        let calendar = Calendar.current
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let localDate = formatter.date(from: self)
+        
+        let m = calendar.component(.month, from: localDate!)
+        let month = DateFormatter().monthSymbols[m - 1]
+        let day = calendar.component(.day, from: localDate!)
+        print(month + " " + String(day))
+        return month + " " + String(day)
+       
+    }
+    func UTCToLocalAndYear() -> String {
+        let calendar = Calendar.current
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let localDate = formatter.date(from: self)
+        
+        let m = calendar.component(.month, from: localDate!)
+        let month = DateFormatter().monthSymbols[m - 1]
+        let day = calendar.component(.day, from: localDate!)
+        let year = calendar.component(.year, from: localDate!)
+        print(month + " " + String(day))
+        return month + " " + String(day) + ", " + String(year)
+       
+    }
 }

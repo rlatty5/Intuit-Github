@@ -61,8 +61,8 @@ class IssueDetailViewController: UIViewController {
             self.nameLabel.text = user.login
             self.titleLabel.text = self.issue.title
             self.stateLabel.text = self.issue.state
-            self.createdAtLabel.text = self.issue.created_at
-            self.updatedLabel.text = self.issue.updated_at
+            self.createdAtLabel.text = self.issue.created_at?.UTCToLocalAndYear()
+            self.updatedLabel.text = self.issue.updated_at?.UTCToLocalAndYear()
             self.profileImageView.layer.masksToBounds = false
             self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height/2
             self.profileImageView.clipsToBounds = true

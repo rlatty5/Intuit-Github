@@ -62,8 +62,8 @@ class RepoDetailViewController: UIViewController {
                 self.privateLabel.text = "Public"
             }
             
-            self.createdLabel.text = self.repository.created_at
-            self.updatedLabel.text = self.repository.updated_at
+            self.createdLabel.text = self.repository.created_at?.UTCToLocalAndYear()
+            self.updatedLabel.text = self.repository.updated_at?.UTCToLocalAndYear()
             self.branchLabel.text = self.repository.default_branch
             
             if(self.repository.open_issues_count == 0){

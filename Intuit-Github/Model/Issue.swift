@@ -16,6 +16,7 @@ class Issue: NSObject {
     var created_at: String?
     var updated_at: String?
     var assignees: [User]?
+    var body: String?
     
     init?(data: [String: Any]) {
         if let id = data["id"] as? Int {
@@ -42,6 +43,10 @@ class Issue: NSObject {
         
         if let updated_at = data["updated_at"] as? String {
             self.updated_at = updated_at
+        }
+        
+        if let body = data["body"] as? String{
+            self.body = body
         }
         
         
