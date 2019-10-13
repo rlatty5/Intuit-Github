@@ -577,8 +577,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ali-3x-ddM">
-                                <rect key="frame" x="20" y="569" width="374" height="293"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ali-3x-ddM">
+                                <rect key="frame" x="20" y="494.5" width="374" height="367.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4s-dd-Eam">
@@ -593,8 +593,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Assignees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1j-gx-YLY">
-                                <rect key="frame" x="20" y="510" width="270" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1j-gx-YLY">
+                                <rect key="frame" x="20" y="448.5" width="270" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="CTd-gt-ypx"/>
                                 </constraints>
@@ -602,14 +602,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbJ-dE-gEw">
+                                <rect key="frame" x="20" y="388.5" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abv-yM-ayd">
+                                <rect key="frame" x="20" y="423.5" width="374" height="0.0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4jX-h3-Xwi" firstAttribute="leading" secondItem="X6t-qz-tNA" secondAttribute="leading" id="3du-0n-eDy"/>
+                            <constraint firstItem="rux-JP-kWH" firstAttribute="trailing" secondItem="xbJ-dE-gEw" secondAttribute="trailing" constant="297" id="4se-Rr-5nT"/>
                             <constraint firstItem="H78-ST-b4B" firstAttribute="leading" secondItem="Bnn-I0-bTh" secondAttribute="trailing" constant="8" symbolic="YES" id="7I0-cF-Yao"/>
                             <constraint firstItem="PsC-tv-dK0" firstAttribute="leading" secondItem="D1j-gx-YLY" secondAttribute="leading" constant="178" id="7Uu-Kg-CSx"/>
+                            <constraint firstItem="abv-yM-ayd" firstAttribute="leading" secondItem="rux-JP-kWH" secondAttribute="leading" constant="20" id="92P-Tx-EU2"/>
                             <constraint firstItem="j4s-dd-Eam" firstAttribute="trailing" secondItem="k0a-ZB-Vn5" secondAttribute="trailing" id="ApD-gL-REH"/>
-                            <constraint firstItem="D1j-gx-YLY" firstAttribute="top" secondItem="PsC-tv-dK0" secondAttribute="bottom" constant="80" id="Cu1-SN-eVZ"/>
                             <constraint firstItem="rux-JP-kWH" firstAttribute="trailing" secondItem="D1j-gx-YLY" secondAttribute="trailing" constant="124" id="Dgl-Yl-a5B"/>
                             <constraint firstItem="Bnn-I0-bTh" firstAttribute="top" secondItem="H78-ST-b4B" secondAttribute="top" id="F5n-v4-r5o"/>
                             <constraint firstItem="Ali-3x-ddM" firstAttribute="bottom" secondItem="rux-JP-kWH" secondAttribute="bottom" id="FaG-UA-TRx"/>
@@ -621,11 +635,13 @@
                             <constraint firstItem="rux-JP-kWH" firstAttribute="trailing" secondItem="IDz-Wr-xU8" secondAttribute="trailing" constant="103" id="TJm-vC-qI2"/>
                             <constraint firstItem="Bnn-I0-bTh" firstAttribute="top" secondItem="4jX-h3-Xwi" secondAttribute="bottom" constant="17" id="Vk7-Md-OJy"/>
                             <constraint firstItem="e69-lt-K2j" firstAttribute="leading" secondItem="PsC-tv-dK0" secondAttribute="leading" id="ZWm-02-cUn"/>
+                            <constraint firstItem="rux-JP-kWH" firstAttribute="trailing" secondItem="abv-yM-ayd" secondAttribute="trailing" constant="20" id="aMd-Yb-haC"/>
                             <constraint firstItem="H78-ST-b4B" firstAttribute="trailing" secondItem="Ali-3x-ddM" secondAttribute="trailing" id="aX2-Op-AiY"/>
                             <constraint firstAttribute="trailing" secondItem="4jX-h3-Xwi" secondAttribute="trailing" id="bsk-Iz-fj1"/>
                             <constraint firstItem="Ali-3x-ddM" firstAttribute="top" secondItem="D1j-gx-YLY" secondAttribute="bottom" constant="8" symbolic="YES" id="coH-xp-gwa"/>
                             <constraint firstItem="4jX-h3-Xwi" firstAttribute="centerX" secondItem="Ali-3x-ddM" secondAttribute="centerX" id="fH3-IO-HRf"/>
                             <constraint firstItem="e69-lt-K2j" firstAttribute="top" secondItem="fcj-ya-TWH" secondAttribute="bottom" constant="53" id="fUz-YV-h7l"/>
+                            <constraint firstItem="xbJ-dE-gEw" firstAttribute="top" secondItem="k0a-ZB-Vn5" secondAttribute="bottom" constant="8.5" id="fft-gB-wcf"/>
                             <constraint firstItem="4jX-h3-Xwi" firstAttribute="top" secondItem="rux-JP-kWH" secondAttribute="top" id="jaT-zp-8jo"/>
                             <constraint firstItem="j4s-dd-Eam" firstAttribute="trailing" secondItem="fcj-ya-TWH" secondAttribute="trailing" id="kk4-Ev-MbZ"/>
                             <constraint firstItem="PsC-tv-dK0" firstAttribute="top" secondItem="e69-lt-K2j" secondAttribute="bottom" constant="8" symbolic="YES" id="lNX-L1-Zeu"/>
@@ -635,6 +651,9 @@
                             <constraint firstItem="rux-JP-kWH" firstAttribute="trailing" secondItem="fcj-ya-TWH" secondAttribute="trailing" constant="264" id="p9M-8c-UY9"/>
                             <constraint firstItem="IDz-Wr-xU8" firstAttribute="top" secondItem="H78-ST-b4B" secondAttribute="bottom" constant="28" id="phS-uO-Z4G"/>
                             <constraint firstItem="Bnn-I0-bTh" firstAttribute="leading" secondItem="fcj-ya-TWH" secondAttribute="leading" id="rAM-Tq-0Qx"/>
+                            <constraint firstItem="xbJ-dE-gEw" firstAttribute="leading" secondItem="k0a-ZB-Vn5" secondAttribute="leading" id="sFb-pj-yS2"/>
+                            <constraint firstItem="abv-yM-ayd" firstAttribute="top" secondItem="xbJ-dE-gEw" secondAttribute="bottom" constant="14" id="sjM-uS-eZg"/>
+                            <constraint firstItem="D1j-gx-YLY" firstAttribute="top" secondItem="abv-yM-ayd" secondAttribute="bottom" constant="25" id="tXo-WS-zek"/>
                             <constraint firstItem="j4s-dd-Eam" firstAttribute="leading" secondItem="k0a-ZB-Vn5" secondAttribute="leading" id="vXv-jk-hLO"/>
                             <constraint firstItem="Bnn-I0-bTh" firstAttribute="trailing" secondItem="fcj-ya-TWH" secondAttribute="trailing" id="wsw-KW-3G4"/>
                             <constraint firstItem="j4s-dd-Eam" firstAttribute="leading" secondItem="fcj-ya-TWH" secondAttribute="leading" id="yZj-U4-WI3"/>
@@ -644,6 +663,7 @@
                     </view>
                     <connections>
                         <outlet property="assigneesLabel" destination="D1j-gx-YLY" id="1pw-ds-SiW"/>
+                        <outlet property="bodyLabel" destination="abv-yM-ayd" id="dIq-FC-Gy0"/>
                         <outlet property="createdAtLabel" destination="e69-lt-K2j" id="F3a-Ht-YeN"/>
                         <outlet property="nameLabel" destination="fcj-ya-TWH" id="oPg-Rk-P08"/>
                         <outlet property="profileImageView" destination="Bnn-I0-bTh" id="C6C-Wv-Qbt"/>

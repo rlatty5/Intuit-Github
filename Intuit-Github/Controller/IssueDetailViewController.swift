@@ -20,6 +20,7 @@ class IssueDetailViewController: UIViewController {
     @IBOutlet weak var assigneesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var bodyLabel: UILabel!
     
     var issue:Issue!
     var assignees:[User] = []
@@ -61,6 +62,7 @@ class IssueDetailViewController: UIViewController {
             self.nameLabel.text = user.login
             self.titleLabel.text = self.issue.title
             self.stateLabel.text = self.issue.state
+            self.bodyLabel.text = self.issue.body
             self.createdAtLabel.text = self.issue.created_at?.UTCToLocalAndYear()
             self.updatedLabel.text = self.issue.updated_at?.UTCToLocalAndYear()
             self.profileImageView.layer.masksToBounds = false
