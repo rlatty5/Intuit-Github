@@ -30,6 +30,7 @@ class RepoDetailViewController: UIViewController {
     @IBOutlet weak var starCountLabel: UILabel!
     @IBOutlet weak var watchCountLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backgroundView: UIView!
     
     
     var repository:Repository!
@@ -42,6 +43,9 @@ class RepoDetailViewController: UIViewController {
     }
     
     func configureView(){
+        backgroundView.layer.cornerRadius = 10
+        issuesButton.layer.cornerRadius = 10
+        
         let user:User = repository.owner!
         self.profileViewController.downloadFrom(link: user.avatar_url!) {
             self.nameLabel.text = user.login

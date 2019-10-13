@@ -63,6 +63,9 @@ class IssueDetailViewController: UIViewController {
             self.stateLabel.text = self.issue.state
             self.createdAtLabel.text = self.issue.created_at
             self.updatedLabel.text = self.issue.updated_at
+            self.profileImageView.layer.masksToBounds = false
+            self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height/2
+            self.profileImageView.clipsToBounds = true
             
         }
     }
