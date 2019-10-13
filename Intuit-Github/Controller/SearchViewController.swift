@@ -32,7 +32,11 @@ class SearchViewController: UIViewController {
         
     }
     
-    
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     
 }
 
@@ -68,13 +72,18 @@ extension SearchViewController: UISearchBarDelegate{
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         //isSearching = false;
-        
+        view.endEditing(true)
+        searchBar.resignFirstResponder()
+        searchBar.endEditing(true)
         print("searchBarTextDidEndEditing")
+        if(searchBar.text == nil || searchBar.text!.isEmpty){
+            self.navigationController?.popViewController(animated: true)
+        }
         
     }
     
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
-        return false
+        return true
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -87,18 +96,8 @@ extension SearchViewController: UISearchBarDelegate{
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        if searchBar.text != nil && searchBar.text!.isEmpty == false {
-            isSearching = true;
-        } else{
-            isSearching = false;
-            
-        }
-        DispatchQueue.main.async {
-           self.tableView.reloadData()
-           
-        }
         print("searchBarSearchButtonClicked")
+        view.endEditing(true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -109,6 +108,7 @@ extension SearchViewController: UISearchBarDelegate{
             isSearching = true;
         } else{
             isSearching = false;
+            self.navigationController?.popViewController(animated: true)
             
         }
         

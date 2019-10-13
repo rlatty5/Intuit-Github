@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vpx-4w-jeN">
+                    <searchBar contentMode="redraw" placeholder="Search Repositories" translatesAutoresizingMaskIntoConstraints="NO" id="vpx-4w-jeN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>

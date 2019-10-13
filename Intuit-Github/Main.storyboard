@@ -120,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="927.536231884058" y="-638.16964285714278"/>
         </scene>
-        <!--Item 2-->
+        <!--Home View Controller-->
         <scene sceneID="0Al-oU-05W">
             <objects>
                 <viewController id="CKO-J7-Ax0" customClass="HomeViewController" customModule="Intuit_Github" customModuleProvider="target" sceneMemberID="viewController">
@@ -151,7 +151,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CTu-r9-fFF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="3Kb-Qo-obX"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="3Kb-Qo-obX"/>
                     <connections>
                         <outlet property="tableView" destination="PEd-pe-Bwr" id="b3t-Gc-Oth"/>
                     </connections>
@@ -754,7 +754,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="CKO-J7-Ax0" kind="relationship" relationship="viewControllers" id="Xte-EX-Fs7"/>
-                        <segue destination="xNZ-cg-dw7" kind="relationship" relationship="viewControllers" id="x6w-0u-uRk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adh-Bo-97j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
