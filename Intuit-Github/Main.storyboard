@@ -70,6 +70,56 @@
             </objects>
             <point key="canvasLocation" x="-542.02898550724638" y="26.785714285714285"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="sH7-DJ-sCi">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tLj-uh-N7I" customClass="SearchViewController" customModule="Intuit_Github" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KI2-yI-dfp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLO-WA-NDp">
+                                <rect key="frame" x="20" y="44" width="374" height="47"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dz0-hG-oNB">
+                                <rect key="frame" x="20" y="153" width="374" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Repositories" translatesAutoresizingMaskIntoConstraints="NO" id="P3p-c0-bc6">
+                                <rect key="frame" x="0.0" y="91" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6F4-4L-3Nb"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dz0-hG-oNB" firstAttribute="top" secondItem="P3p-c0-bc6" secondAttribute="bottom" constant="18" id="06U-9p-Z1W"/>
+                            <constraint firstItem="CLO-WA-NDp" firstAttribute="trailing" secondItem="dz0-hG-oNB" secondAttribute="trailing" id="5hh-Vg-O8B"/>
+                            <constraint firstItem="dz0-hG-oNB" firstAttribute="bottom" secondItem="dSR-4W-DYp" secondAttribute="bottom" id="9PT-1h-jnE"/>
+                            <constraint firstItem="CLO-WA-NDp" firstAttribute="leading" secondItem="KI2-yI-dfp" secondAttribute="leadingMargin" id="IE7-di-4kw"/>
+                            <constraint firstItem="P3p-c0-bc6" firstAttribute="top" secondItem="CLO-WA-NDp" secondAttribute="bottom" id="Iku-hA-CeJ"/>
+                            <constraint firstItem="P3p-c0-bc6" firstAttribute="leading" secondItem="dSR-4W-DYp" secondAttribute="leading" id="dVI-9c-hCN"/>
+                            <constraint firstItem="CLO-WA-NDp" firstAttribute="trailing" secondItem="KI2-yI-dfp" secondAttribute="trailingMargin" id="fGd-uR-5BH"/>
+                            <constraint firstItem="CLO-WA-NDp" firstAttribute="centerX" secondItem="P3p-c0-bc6" secondAttribute="centerX" id="qZL-ad-Njc"/>
+                            <constraint firstItem="CLO-WA-NDp" firstAttribute="top" secondItem="dSR-4W-DYp" secondAttribute="top" id="ran-fH-NEV"/>
+                            <constraint firstItem="CLO-WA-NDp" firstAttribute="leading" secondItem="dz0-hG-oNB" secondAttribute="leading" id="sV9-AA-4db"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dSR-4W-DYp"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="P3p-c0-bc6" id="mlH-ag-NIq"/>
+                        <outlet property="tableView" destination="dz0-hG-oNB" id="TnM-Wi-4vg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5T-GZ-AmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927.536231884058" y="-638.16964285714278"/>
+        </scene>
         <!--Item 2-->
         <scene sceneID="0Al-oU-05W">
             <objects>

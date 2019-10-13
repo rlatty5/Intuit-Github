@@ -46,6 +46,7 @@
 		F41C1FFF234FC84900B6CC9F /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4010BCB234E364F007DD265 /* Issue.swift */; };
 		F476DAF1234EF50D00530C4B /* RepoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */; };
 		F476DAF4234F54AE00530C4B /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F476DAF3234F54AE00530C4B /* IssueCell.xib */; };
+		F4E46ADD2353D9BE00EEEDEB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E46ADC2353D9BE00EEEDEB /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		F41C1FF9234FC10600B6CC9F /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoNavigationController.swift; sourceTree = "<group>"; };
 		F476DAF3234F54AE00530C4B /* IssueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
+		F4E46ADC2353D9BE00EEEDEB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 				F4010BD1234E38F8007DD265 /* IssuesViewController.swift */,
 				F476DAF0234EF50D00530C4B /* RepoNavigationController.swift */,
 				F41C1FF3234FAD6400B6CC9F /* IssueDetailViewController.swift */,
+				F4E46ADC2353D9BE00EEEDEB /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				F4010B8D234E1938007DD265 /* Intuit_Github.xcdatamodeld in Sources */,
 				F4010B88234E1938007DD265 /* AppDelegate.swift in Sources */,
 				F476DAF1234EF50D00530C4B /* RepoNavigationController.swift in Sources */,
+				F4E46ADD2353D9BE00EEEDEB /* SearchViewController.swift in Sources */,
 				F4010BCA234E3606007DD265 /* Repository.swift in Sources */,
 				F4010B8F234E1938007DD265 /* ContentView.swift in Sources */,
 				F4010BD0234E380E007DD265 /* RepoDetailViewController.swift in Sources */,

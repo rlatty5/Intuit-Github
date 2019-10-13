@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var repositoryList: [Repository] = []
-    
     var isSearching:Bool = false
     
     var selectedRepository: Repository?
@@ -75,7 +74,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SearchBarCell") as! SearchBarCell
@@ -98,10 +96,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.selectedRepository = repositoryList[indexPath.row - 1]
             vc.repository = self.selectedRepository
             self.navigationController?.pushViewController(vc, animated: true)
+        } else{
+            print("search cell touched")
         }
         
     }
-    
 
 }
 
@@ -109,19 +108,28 @@ extension HomeViewController: UISearchBarDelegate{
     
    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         isSearching = true;
+        let vc:SearchViewController = self.storyboard!.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        vc.repositoryList = repositoryList
+        self.navigationController?.pushViewController(vc, animated: true)
+        searchBar.resignFirstResponder()
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        isSearching = false;
         
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         isSearching = false;
-        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("textDidChange")
+        //goto next screen
+        //clear the search text
     }
     
 }
