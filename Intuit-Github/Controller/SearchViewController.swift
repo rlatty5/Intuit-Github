@@ -29,6 +29,8 @@ class SearchViewController: UIViewController {
         searchBar.delegate = self
         searchBar.becomeFirstResponder()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        tableView.addGestureRecognizer(tap)
         
     }
     

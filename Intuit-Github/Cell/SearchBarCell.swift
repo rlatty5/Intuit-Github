@@ -24,7 +24,7 @@ extension SearchBarCell: UISearchBarDelegate{
     
    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         print("searchBarTextDidBeginEditing")
-    delegate.searchBarTextDidBeginEditing?(searchBar)
+        delegate.searchBarTextDidBeginEditing?(searchBar)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {

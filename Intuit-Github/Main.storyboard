@@ -151,7 +151,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CTu-r9-fFF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="3Kb-Qo-obX"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="search" id="3Kb-Qo-obX"/>
                     <connections>
                         <outlet property="tableView" destination="PEd-pe-Bwr" id="b3t-Gc-Oth"/>
                     </connections>
